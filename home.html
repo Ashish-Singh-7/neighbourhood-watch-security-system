@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page with Cards</title>
+  <link rel="stylesheet" href="color.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+  <header>
+    <h1>Home Page</h1>
+  </header>
+
+  <!-- Cards Container -->
+  <div class="card-container">
+    
+    <!-- Chat Card -->
+    <div class="card" id="chat-card">
+      <h2>Chat</h2>
+      <p>Welcome to the chat!</p>
+    </div>
+
+    <!-- Alert Card -->
+    <div class="card" id="alert-card">
+      <h2>Alert</h2>
+      <p>No alerts at the moment.</p>
+    </div>
+
+    <!-- Emergency Call Card -->
+    <div class="card" id="emergency-call-card">
+      <h2>Emergency Call</h2>
+      <p>Dial: 911 or click the button below</p>
+      <button onclick="makeEmergencyCall()">Call Now</button>
+    </div>
+
+    <!-- Notification Card -->
+    <div class="card" id="notification-card">
+      <h2>Notification</h2>
+      <p>You have no new notifications.</p>
+    </div>
+
+    <!-- Location Card with Map -->
+   <div class="card" id="location-card">
+    <h2>Location Watch</h2>
+    <p>Latitude: <span id="latitude">-</span></p>
+    <p>Longitude: <span id="longitude">-</span></p>
+    <p>Accuracy: <span id="accuracy">-</span> meters</p>
+    <p>Status: <span id="status">Waiting for location...</span></p>
+    <button id="start-watch" onclick="startWatching()">Start Watching Location</button>
+    <button id="stop-watch" onclick="stopWatching()" disabled>Stop Watching Location</button>
+  
+    <!-- Map Container -->
+    <div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
+
+  </div>
+
+  <script src="script.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
+
